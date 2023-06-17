@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aplicação Web </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" class="active" onclick="MostrarPagina('calculadora')">Calculadora</a></li>
+        <li><a href="#" onclick="MostrarPagina('imc')">Cálculo IMC</a></li>
+        <li><a href="#" onclick="MostrarPagina('formulario')">Formulário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   
+    <div id="calculadora" class="page"> 
+      <h1>Calculadora</h1>
+      <div class="calculator">
+        <div class="calculator-screen">
+          <input type="text" id="calculator-screen-input" readonly>
+        </div>
+        <div class="calculator-buttons">
+          <button class="operator" value="+">+</button>
+          <button class="operator" value="-">-</button>
+          <button class="operator" value="*">*</button>
+          <button class="operator" value="/">/</button>
+          <button class="number" value="7">7</button>
+          <button class="number" value="8">8</button>
+          <button class="number" value="9">9</button>
+          <button class="number" value="4">4</button>
+          <button class="number" value="5">5</button>
+          <button class="number" value="6">6</button>
+          <button class="number" value="1">1</button>
+          <button class="number" value="2">2</button>
+          <button class="number" value="3">3</button>
+          <button class="number" value="0">0</button>
+          <button id="clear-button">C</button>
+          <button id="calculate-button">=</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="imc" class="page">
+      <h1>Cálculo de IMC</h1>
+      <form id="imcForm">
+        <label for="height">Altura (cm):</label>
+        <input type="number" id="height" required>
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" required>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <div id="formulario" class="page">
+      <h1>Formulário</h1>
+      <form id="myForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required>
+    
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+    
+        <label for="message">Mensagem:</label>
+        <textarea id="message" required></textarea>
+    
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body
